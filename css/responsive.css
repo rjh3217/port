@@ -382,11 +382,16 @@
     }
 
 
-    
+
     .f_box_wrap .info_wrap {
 
         align-items: normal;
         padding-left: 42px;
 
+    }
+
+    .f_box_wrap .title h1 {
+        font-size: 30px;
+        line-height: 1.4;
     }
 }
