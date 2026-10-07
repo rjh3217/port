@@ -563,8 +563,19 @@
     .f_box_wrap .info_wrap {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 50px;
         padding-bottom: 60px;
+    }
+
+    .f_box_wrap .info_wrap a span {
+        color: #fff;
+    }
+
+    .f_box_wrap .info_wrap>div a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
     .f_box_wrap .info_wrap .mail img {
