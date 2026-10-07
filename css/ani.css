@@ -1,0 +1,408 @@
+@keyframes shake {
+    0% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(4deg);
+    }
+
+    100% {
+        transform: rotate(-4deg);
+    }
+}
+
+.sc1 .go_notion img {
+    animation: shake .7s ease-in-out infinite;
+}
+
+.sc1 .go_notion img:hover {
+    animation-play-state: paused;
+}
+
+@keyframes go_bottom {
+    0% {
+        transform: translateX(-50%) translateY(4px);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-4px);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(4px);
+    }
+}
+
+.sc1 .gobottom {
+    animation: go_bottom 1s ease-in-out infinite;
+}
+
+/* 카드 */
+.sc3 .grid_box_wrap .grid_box {
+    overflow: hidden;
+}
+
+/* 이미지 영역 */
+.sc3 .grid_box_wrap .grid_box .img_wrap {
+    overflow: hidden;
+}
+
+/* 이미지 */
+.sc3 .grid_box_wrap .grid_box .img_wrap img {
+    display: block;
+    width: 100%;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* 호버 */
+.sc3 .grid_box_wrap .grid_box:hover .img_wrap img {
+    transform: scale(1.05);
+}
+
+.btn_wrap:hover .arrow,
+.site:hover .arrow {
+    animation: btn_move 0.7s ease-in-out infinite;
+}
+
+/* SC4 카드 */
+.sc4 .card_wrap .card {
+    overflow: hidden;
+}
+
+/* 이미지 */
+.sc4 .card_wrap .card>img {
+    display: block;
+    width: 100%;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* 호버 */
+.sc4 .card_wrap .card:hover>img {
+    transform: scale(1.05);
+}
+
+/* 버튼 호버 효과 */
+.sc3 .grid_box_wrap .grid_box .site_wrap .site,
+.sc4 .card_wrap .card .box_wrap .btn_wrap,
+.sc5 .m_box_left .btn_wrap,
+.sc5 .m_box_right .btn_wrap {
+    transition: background 0.3s ease;
+}
+
+.sc3 .grid_box_wrap .grid_box .site_wrap .site:hover,
+.sc4 .card_wrap .card .box_wrap .btn_wrap:hover,
+.sc5 .m_box_left .btn_wrap:hover,
+.sc5 .m_box_right .btn_wrap:hover {
+    background: rgba(15, 35, 75, 0.7);
+    border: 1px solid rgba(15, 35, 75, 0.1);
+}
+
+
+@keyframes btn_move {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+/* 별 효과 */
+.sc1 {
+    position: relative;
+}
+
+.star_wrap {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 10px 3px rgba(0, 200, 255, 0.8);
+    animation: star_twinkle 2s ease-in-out infinite;
+}
+
+
+/* 별 위치 */
+.star1 {
+    left: 18%;
+    top: 48%;
+    animation-delay: 0s;
+}
+
+.star2 {
+    left: 12%;
+    bottom: 33%;
+    animation-delay: 0.8s;
+}
+
+.star3 {
+    left: 40%;
+    bottom: 22%;
+    animation-delay: 1.5s;
+}
+
+.star4 {
+    left: 60%;
+    top: 18%;
+    animation-delay: 0.4s;
+}
+
+.star5 {
+    left: 30%;
+    top: 32%;
+    animation-delay: 1.2s;
+}
+
+.star6 {
+    right: 22%;
+    top: 41%;
+    animation-delay: 1.8s;
+}
+
+.star7 {
+    left: 82%;
+    top: 28%;
+    animation-delay: 0.6s;
+}
+
+.star8 {
+    right: 26%;
+    bottom: 39%;
+    animation-delay: 1.4s;
+}
+
+
+/* 반짝임 */
+@keyframes star_twinkle {
+    0% {
+        opacity: 0.2;
+        transform: scale(0.6);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+
+    100% {
+        opacity: 0.2;
+        transform: scale(0.6);
+    }
+}
+
+/* 별 반짝임 끝 */
+
+/* 고리시작 */
+
+/* =========================================================
+   SC1 행성 + 토성형 고리
+========================================================= */
+
+.sc1 {
+    position: relative;
+
+    background: url('../images/sc1_bg.png') center no-repeat;
+    background-size: 600px;
+}
+
+
+/* =========================================================
+   기본 고리
+   → 행성 뒤쪽에 깔리는 고리
+========================================================= */
+
+.sc1 .planet_ring {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 900px;
+    height: 230px;
+
+    border: 2px solid rgba(0, 180, 255, 0.35);
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%) rotate(-15deg);
+
+    box-shadow:
+        0 0 8px rgba(0, 200, 255, 0.5),
+        0 0 20px rgba(0, 120, 255, 0.2);
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   행성
+   → 뒤쪽 고리를 덮음
+========================================================= */
+
+.sc1::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 600px;
+    height: 600px;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+
+
+
+
+/* =========================================================
+   앞쪽 파란 점
+   → 행성 앞쪽에서만 보여줌
+========================================================= */
+
+.sc1 .planet_dot_front {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 900px;
+    height: 230px;
+
+    transform:
+        translate(-50%, -50%) rotate(-15deg);
+
+    pointer-events: none;
+
+    z-index: 4;
+}
+
+
+/* 실제 움직이는 점 */
+.sc1 .planet_dot_front span {
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #00eaff;
+
+    box-shadow:
+        0 0 8px #00eaff,
+        0 0 18px #00bfff,
+        0 0 30px rgba(0, 200, 255, 0.9);
+
+    offset-path: ellipse(450px 115px at 50% 50%);
+    offset-distance: 0%;
+    offset-rotate: 0deg;
+
+    animation:
+        planet_dot 4s linear infinite,
+        planet_dot_opacity 4s linear infinite;
+}
+
+/* =========================================================
+   파란 점 이동
+========================================================= */
+
+@keyframes planet_dot {
+
+    from {
+        offset-distance: 0%;
+    }
+
+    to {
+        offset-distance: 100%;
+    }
+}
+
+
+@keyframes planet_dot_opacity {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 고리 끝 */
+
+.scroll_up {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 0.8s ease, translate 0.8s ease;
+}
+
+.scroll_up.on {
+    opacity: 1;
+    translate: 0 0;
+}
+
+/* sc2 글자 한줄씩 나오게 */
+.sc2 .onemin.scroll_lines span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    color: #fff;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.sc2 .onemin.scroll_lines.on span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sc2 .onemin.scroll_lines.on span:nth-of-type(1) {
+    transition-delay: 0s;
+}
+
+.sc2 .onemin.scroll_lines.on span:nth-of-type(2) {
+    transition-delay: 0.2s;
+}
+
+.sc2 .onemin.scroll_lines.on span:nth-of-type(3) {
+    transition-delay: 0.4s;
+}

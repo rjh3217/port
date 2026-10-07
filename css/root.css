@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+:root {
+    --main_color: #fbfbfb;
+    --sub1_color: #00c9b7;
+    --sub2_color: #94a3b8;
+
+
+    /* 폰트 사이즈 */
+    --intro_title: 70px;
+    --sc_wrap_title: 40px;
+    --sc_title: 26px;
+    --sub_title_1: 22px;
+    --sub_title_2: 30px;
+    --sub2_title: 16px;
+
+    --tag_txt: 14px;
+    --tag_btn_font:14px;
+
+    /* 디자인 */
+    --big_d:36px;
+    --btn_txt:18px;
+
+    /* footer */
+    --fm_title:76px;
+    --fm_sub_txt:20px;
+    --fm_clb:24px;
+    --fm_l_txt:16px;
+}
