@@ -378,6 +378,7 @@
     .sc5 .m_box_right .tag_wrap,
     .sc5 .m_box_left .tag_wrap {
         margin-top: 10px;
+        gap: 0;
     }
 
 

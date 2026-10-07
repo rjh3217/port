@@ -134,7 +134,7 @@ function typing() {
         }
     }
 
-    setTimeout(typing, isDeleting ? 150 : 250);
+    setTimeout(typing, isDeleting ? 200 : 150);
 }
 
 typing();
