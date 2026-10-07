@@ -21,7 +21,7 @@
     .sc1 .inner_b,
     .sc2 .inner_b {
         width: 100%;
-        padding: 0 30px;
+        padding: 0 20px;
     }
 
     .sc2 .content_wrap .profile .training {
@@ -44,7 +44,7 @@
 @media (max-width: 1440px) {
 
     .sc5 {
-        padding: 100px 0;
+        padding: 40px 0 60px;
     }
 
     .sc5 .box_wrap {
@@ -90,9 +90,10 @@
         transform: none;
     }
 
-    footer {
-        margin-bottom: 100px;
+    .sc3 {
+        margin-top: 5%;
     }
+
 }
 
 @media (max-width: 1260px) {
@@ -144,13 +145,13 @@
     }
 
     .sc4 {
-        padding-top: 4%;
+        padding-top: 80px;
     }
 
     /* Footer */
     .f_box_wrap {
         transform: none;
-        padding: 80px 30px 40px;
+        padding: 0 30px 40px;
     }
 
     .f_box_wrap .title h1 {
@@ -300,9 +301,13 @@
         padding: 7px 18px;
     }
 
+    .sc4 .inner .title {
+        padding-bottom: 20px;
+    }
+
     /* Footer */
     .f_box_wrap {
-        padding: 70px 20px 30px;
+        padding: 0 20px 30px;
     }
 
     .f_box_wrap .title h1 {
@@ -318,9 +323,10 @@
     }
 
     .f_box_wrap .info_wrap {
-        gap: 25px;
+        gap: 15px;
         flex-direction: column;
         align-items: center;
+        /* padding-left: 42px; */
         padding-bottom: 40px;
     }
 
@@ -373,5 +379,14 @@
     .sc5 .m_box_right .tag_wrap,
     .sc5 .m_box_left .tag_wrap {
         margin-top: 10px;
+    }
+
+
+    
+    .f_box_wrap .info_wrap {
+
+        align-items: normal;
+        padding-left: 42px;
+
     }
 }
