@@ -102,27 +102,41 @@ function typing() {
 
     const currentText = texts[textIndex];
 
+    // 타이핑 / 삭제 중에는 커서 표시
+    changeText.classList.add('typing');
+
     if (isDeleting) {
-        // 한 글자씩 지우기
-        changeText.textContent = currentText.substring(0, charIndex - 1);
+
+        // 한 글자씩 삭제
+        changeText.textContent =
+            currentText.substring(0, charIndex - 1);
+
         charIndex--;
 
     } else {
-        // 한 글자씩 나타내기
-        changeText.textContent = currentText.substring(0, charIndex + 1);
+
+        // 한 글자씩 입력
+        changeText.textContent =
+            currentText.substring(0, charIndex + 1);
+
         charIndex++;
     }
 
-    // 단어를 다 입력했으면 잠시 기다렸다가 삭제
+    // 글자를 전부 입력했으면
     if (!isDeleting && charIndex === currentText.length) {
+
+        // 완성 상태에서는 커서 숨김
+        changeText.classList.remove('typing');
 
         isDeleting = true;
 
-        setTimeout(typing, 1500);
+        // 1.5초 동안 완성된 글자 유지
+        setTimeout(typing, 2000);
+
         return;
     }
 
-    // 단어를 다 지웠으면 다음 단어로 변경
+    // 글자를 전부 삭제했으면 다음 단어
     if (isDeleting && charIndex === 0) {
 
         isDeleting = false;
@@ -134,7 +148,7 @@ function typing() {
         }
     }
 
-    setTimeout(typing, isDeleting ? 200 : 150);
+    setTimeout(typing, isDeleting ? 250 : 200);
 }
 
 typing();
@@ -220,7 +234,7 @@ function sc2ScrollEvent() {
         // ③ 0.6초 후 교육
         setTimeout(function () {
             sc2Training.classList.add('on');
-        }, 1000);
+        }, 1700);
 
     }
 

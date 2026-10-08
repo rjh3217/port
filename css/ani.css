@@ -400,9 +400,36 @@
 }
 
 .sc2 .onemin.scroll_lines.on span:nth-of-type(2) {
-    transition-delay: 0.2s;
+    transition-delay: 0.4s;
 }
 
 .sc2 .onemin.scroll_lines.on span:nth-of-type(3) {
-    transition-delay: 0.4s;
+    transition-delay: 0.8s;
+}
+
+/* 타이핑 효과 */
+.change_text.typing::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 0.9em;
+    margin-left: 5px;
+    background: currentColor;
+    vertical-align: -0.08em;
+    animation: cursorBlink 0.7s infinite;
+    color: var(--main_color);
+}
+
+@keyframes cursorBlink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+
 }
